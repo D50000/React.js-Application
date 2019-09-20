@@ -17,7 +17,12 @@ It is the project configuration file.
     all the modules back.
  2. Input `npm start` for start the server.
 
-//todo package.json add comments #1 8:45
+
+## 3. JSX Components
 
 
-## 3.
+
+## 4. Loadinf CSS into React Application
+load at index.html
+at index.js
+at individual components
