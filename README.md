@@ -40,3 +40,7 @@ at individual components
 
 ## 7. React Router
 a component that control the web routing
+
+## 8. Export methods
+x > export default App;
+{getFunName} > export function getFunName(){}
