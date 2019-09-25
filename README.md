@@ -1,3 +1,4 @@
+
 # React.js-Application
 Develop a Application with **React.js**.
 And make learning notes for everyone.
@@ -17,21 +18,33 @@ It is the project configuration file.
  1. Download the project and input `npm install` and it will reference
     all the modules back.
  2. Input `npm start` for start the server.
+ 3. `ctrl + c` for stop the server.
 
 
-## 3. JSX Components
-{}
-return ( xxx )
+## 3. JSX (JavaScript XML) Components
+```
+return(
+	<Fragment>
+	{/* "Fragment tag" for multiple tag in sigle component */}
+		<header className="top">
+			<h1>D50000 Fish Market</h1>
+			<h3 className="tagline">
+				<span>{this.props.tagline}</span>
+			</h3>
+		</header>
+	</Fragment>
+)
+```
 
 
 ## 4. Loadinf CSS into React Application
-load at index.html
-at index.js
-at individual components
+ 1. Import at **individual components**.
+ 2. Load at index.js or index.html.
 
 
 ## 5. Props and State
-   data "",{}   container
+ - `props` provide for the components.
+ - `state` is the container of `props`.
 
 
 ## 6. Stateless Functional Components
