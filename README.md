@@ -47,13 +47,46 @@ return(
  - `state` is the container of `props`.
 
 
-## 6. Stateless Functional Components
 
+## 6. Stateless Functional Components
+```
+class Header extends React.Component {
+	render() {
+		{/* render DOM....... */}
+		<h3 className="tagline">
+			<span>{this.props.tagline}</span>
+		</h3>
+	}
+}
+```
+If the components only do the simply render stuff. It can change to **Stateless Function**.  ⬇️⬇️⬇️⬇️⬇️⬇️
+```
+const Header = props => (
+	{/* render DOM....... */}
+	<h3 className="tagline">
+		<span>{props.tagline}</span>
+	</h3>
+)
+```
 
 
 ## 7. React Router
-a component that control the web routing
+A component that control the web routing & redirect.
+```
+<Switch>
+	<Route exact path="/" component={StorePicker} />
+	<Route path="/store/:storeId" component={App} />
+	<Route component={NotFound} />
+</Switch>
+```
+
 
 ## 8. Export methods
-x > export default App;
-{getFunName} > export function getFunName(){}
+ - Import **library**:
+export  default  Class;  
+⬇️⬇️⬇️⬇️⬇️⬇️
+import  Class from  "Class";
+ - Import **method**:
+export  function  test(arr) {........}
+⬇️⬇️⬇️⬇️⬇️⬇️
+import { test } from "Class ";
