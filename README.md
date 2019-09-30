@@ -47,7 +47,6 @@ return(
  - `state` is the container of `props`.
 
 
-
 ## 6. Stateless Functional Components
 ```
 class Header extends React.Component {
@@ -90,3 +89,6 @@ import  Class from  "Class";
 export  function  test(arr) {........}
 ⬇️⬇️⬇️⬇️⬇️⬇️
 import { test } from "Class ";
+
+
+## 10. State in React
