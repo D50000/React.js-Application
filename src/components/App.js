@@ -4,14 +4,33 @@ import Inventory from "./Inventory";
 import Order from "./Order";
 
 class App extends React.Component {
+    // 'State' is a object that contain all the component's data. 
+    state = {
+        fishes: {},
+        order: {}
+    };
+
+    addFish = fish => {
+        // Modify "state" in react must use set state API. (Or will not work)
+        // 1. Take a copy of the existing state.
+        // Object copy in JS > use 'Object spread' (not deep clone)
+        const fishes = {...this.state.fishes};
+        // 2. Add new fish to that fishes variable.
+        fishes[`fish${Date.now()}`] = fish;
+        // 3. Set the new fishes object to state. ex: "setState({ update data })"
+        this.setState({
+            fishes: fishes
+        });
+    };
+
     render() {
         return(
             <div className="catch-of-the-day">
                 <div className="menu">
-                    <Header tagline="123"></Header>
+                    <Header tagline="D5000"></Header>
                 </div>
-                <Inventory/>
                 <Order/>
+                <Inventory addFish={this.addFish}/>
             </div>
         )
     }

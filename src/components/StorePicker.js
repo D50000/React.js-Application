@@ -6,6 +6,7 @@ class StorePicker extends React.Component{
     constructor(){
         // Need to super() first, if the current class is extends from other class.
         super();
+        // Bind the "this" to the function.
         this.goToStore = this.goToStore.bind(this);
     }
 
@@ -17,7 +18,6 @@ class StorePicker extends React.Component{
         event.preventDefault();
         // 2. Get the text from that input.Ｂut don't "select" or "modify" any DOM in react framework.
         const storeName = this.myInput.current.value;
-
         // 3. Use the Router to change the page to /store/xxxxxxx. 
         this.props.history.push(`/store/${storeName}`);
     }
