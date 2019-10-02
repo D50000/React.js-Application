@@ -7,7 +7,7 @@ class AddFishForm extends React.Component {
     descRef = React.createRef();
     imageRef = React.createRef();
 
-    // Bind the "this" to the function. (Usually bind in this way)
+    // Arrow function will bind the "this" to the function. (Usually bind in this way)
     createFish = (event) => {
         event.preventDefault();
         const fish = {
