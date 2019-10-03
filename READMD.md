@@ -115,3 +115,5 @@ import  Class from  "Class";
 **State** is a object that contain all the component's data. 
 put at root component
 
+
+
