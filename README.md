@@ -116,4 +116,5 @@ import  Class from  "Class";
 put at root component
 
 
-
+## 11. Render Function
+a separate render function in a single component, for more readable
