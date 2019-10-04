@@ -22,7 +22,7 @@ It is the project configuration file.
 
 
 ## 3. JSX (JavaScript XML) Components
-JSX doesn't have any logic statement. (ex: loop for create DOM)
+**JSX doesn't have any logic statement.** (ex: loop for create DOM)
 ```
 return(
 	<Fragment>
@@ -51,11 +51,13 @@ return(
 ## 6. Stateless Functional Components
 ```
 class Header extends React.Component {
-   render() {
-		{/* render DOM....... */}
-		<h3 className="tagline">
-			<span>{this.props.tagline}</span>
-		</h3>
+    render() {
+        return (
+            {/* render DOM....... */}
+            <h3 className="tagline">
+                <span>{this.props.tagline}</span>
+            </h3>
+        );
 	}
 }
 ```
@@ -64,9 +66,9 @@ If the components only do the simply render stuff. It can change to **Stateless 
 const Header = props => (
 	{/* render DOM....... */}
 	<h3 className="tagline">
-		<span>{props.tagline}</span>
+	    <span>{props.tagline}</span>
 	</h3>
-)
+);
 ```
 
 
@@ -84,37 +86,61 @@ A component that control the web routing & redirect.
 ## 8. Export methods
  - Import **library**:  
  export  default  Class;  
- ⬇️⬇️⬇️⬇️⬇️⬇️
-import  Class from  "Class";  
+ ⬇️⬇️⬇️⬇️⬇️⬇️  
+ import  Class from  "Class";  
  - Import **method**:  
  export  function  test(arr) {........}  
  ⬇️⬇️⬇️⬇️⬇️⬇️  
  import { test } from "Class ";
 
 
- ## 9. Refs in React
-    constructor(){
-        // Need to super() first, if the current class is extends from other class.
-        super();
-        this.goToStore = this.goToStore.bind(this);
-    }
+## 9. Refs in React
+**ref** can bind the attribute data in the DOM.
+```
+nameRef = React.createRef();
+priceRef = React.createRef();
 
-    myInput = React.createRef();
-
-   goToStore(event){
-        // 1. Stop the form from submitting.
-        event.preventDefault();
-        // 2. Get the text from that input.Ｂut don't "select" or "modify" any DOM in react framework.
-        console.log(this.myInput);
-
-        // 3. Change the page to /store/xxxxxxx
-    }
+render() {
+    return(
+        <form className="fish-edit" onSubmit={this.createFish}>
+            <input name="name" ref={this.nameRef} type="text" placeholder="Name"/>
+            <input name="price" ref={this.priceRef} type="text" placeholder="Price"/>
+        </form>
+    )
+}
+```
 
 
 ## 10. State in React
 **State** is a object that contain all the component's data. 
-put at root component
+Store at root component, and transfer with in props to chil components.
 
 
 ## 11. Render Function
-a separate render function in a single component, for more readable
+A separate render function in a single component, for more readable code.
+
+
+## 12. Firebase
+ - Real time data
+ - WebSocket transfer
+ - Life cycle API control
+
+
+## 13. Life Cycle methods
+https://reactjs.org/docs/react-component.html#mounting
+
+**Mounting:** componentDidMount()
+**Updating:** componentDidUpdate()
+**Unmounting:** componentWillUnmount()
+**Error Handling:** componentDidCatch()
+
+
+## 14. Bi-directional Data Flow and Live State Editing
+There is no Bi-directional Data Binding method in React.
+ 1. Pass the update method down to the component with props.
+ 2. Component call the update method. 
+ 3. App.js update the state.
+
+
+## 15. Animating React Components
+Using "react-transition-group" package, and use it's santax.
