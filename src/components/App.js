@@ -4,6 +4,7 @@ import Inventory from "./Inventory";
 import Order from "./Order";
 import sammpleFishes from "../sample-fishes";
 import Fish from "./Fish";
+import base from "../base";
 
 class App extends React.Component {
     // 'State' is a object that contain all the component's data. 
@@ -11,6 +12,22 @@ class App extends React.Component {
         fishes: {},
         order: {}
     };
+
+    /* This part is not work because the firebase data url are close.
+    componentDidMount(){
+        const { params } = this.props.match;
+        // Not same "ref" with the data input ref.
+        this.ref = base.syncState(`${params.storeId}/fishes`), {
+            context: this,
+            state: "fishes"
+        };
+    }
+
+    componentWillUnmount(){
+        // Unbinding the data base when unmount.
+        base.removeBinding(this.ref);
+    }
+    */
 
     addFish = fish => {
         // Modify "state" in react must use set state API. (Or will not work)
