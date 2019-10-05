@@ -29,6 +29,19 @@ class App extends React.Component {
     }
     */
 
+   componentDidMount(){
+    const { params } = this.props.match;
+    // Reinstate the localStoreage
+    const localStorageRef = localStorage.getItem(params.storeId);
+    if(localStorageRef){
+        this.setState({ order: JSON.parse(localStorageRef)});
+    }
+}
+
+    componentDidUpdate(){
+        localStorage.setItem(this.props.match.params.storeId, JSON.stringify(this.state.order));
+    }
+
     addFish = fish => {
         // Modify "state" in react must use set state API. (Or will not work)
         // 1. Take a copy of the existing state.
