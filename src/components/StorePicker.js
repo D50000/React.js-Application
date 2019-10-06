@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react';
 import { getFunName } from "../helpers";
+import PropTypes from "prop-types";
 
 // Declare a 'StorePicker Component' Class. 
 class StorePicker extends React.Component{
@@ -11,6 +12,10 @@ class StorePicker extends React.Component{
     }
 
     myInput = React.createRef();
+
+    static propTypes = {
+        history: PropTypes.object
+    }
 
     // "This" in the new declare method can't reference back to the original class components.
     goToStore(event){

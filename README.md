@@ -149,3 +149,19 @@ Using "react-transition-group" package, and use it's santax.
 	{orderIds.map(this.renderOrder)}
 </TransitionGroup>
 ```
+
+
+## 16. Component Validation with Prop Types
+[https://zh-hant.reactjs.org/docs/typechecking-with-proptypes.html](https://zh-hant.reactjs.org/docs/typechecking-with-proptypes.html)
+```
+MyComponent.propTypes = {
+	// You can declare that a prop is a specific JS type. By default, these are all optional.
+	optionalArray: PropTypes.array,
+	optionalBool: PropTypes.bool,
+	optionalFunc: PropTypes.func,
+	optionalNumber: PropTypes.number.isRequired,
+	optionalObject: PropTypes.object,
+	optionalString: PropTypes.string.isRequired,
+	optionalSymbol: PropTypes.symbol,
+}
+```

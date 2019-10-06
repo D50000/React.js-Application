@@ -1,7 +1,22 @@
 import React from "react";
 import { formatPrice } from "../helpers";
+import PropTypes from "prop-types";
 
 class Fish extends React.Component {
+    // Prop Types regular react component
+    static propTypes = {
+        // shape() specify the object structure
+        details: PropTypes.shape({
+            image: PropTypes.string,
+            name: PropTypes.string,
+            desc: PropTypes.string,
+            status: PropTypes.string,
+            price: PropTypes.number
+        }),
+        addToOrder: PropTypes.func,
+        index: PropTypes.string
+    }
+
     render() {
         // Use ES6 'destructure'
         const { image, name, price, desc, status } = this.props.details;

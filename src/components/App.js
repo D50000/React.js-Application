@@ -5,6 +5,7 @@ import Order from "./Order";
 import sammpleFishes from "../sample-fishes";
 import Fish from "./Fish";
 import base from "../base";
+import PropTypes from "prop-types";
 
 class App extends React.Component {
     // 'State' is a object that contain all the component's data. 
@@ -12,6 +13,10 @@ class App extends React.Component {
         fishes: {},
         order: {}
     };
+
+    static propTypes = {
+        match: PropTypes.object
+    }
 
     /* This part is not work because the firebase data url are close.
     componentDidMount(){
