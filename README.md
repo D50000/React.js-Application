@@ -123,12 +123,11 @@ A separate render function in a single component, for more readable code.
 ## 12. Firebase
  - Real time data
  - WebSocket transfer
- - Life cycle API control
+ - Life cycle API control data flow
 
 
 ## 13. Life Cycle methods
-https://reactjs.org/docs/react-component.html#mounting
-
+https://reactjs.org/docs/react-component.html#mounting  
 **Mounting:** componentDidMount()
 **Updating:** componentDidUpdate()
 **Unmounting:** componentWillUnmount()
@@ -136,11 +135,17 @@ https://reactjs.org/docs/react-component.html#mounting
 
 
 ## 14. Bi-directional Data Flow and Live State Editing
-There is no Bi-directional Data Binding method in React.
+**There is no Bi-directional Data Binding method in React.** (React Decipline)
  1. Pass the update method down to the component with props.
  2. Component call the update method. 
  3. App.js update the state.
 
 
 ## 15. Animating React Components
-Using "react-transition-group" package, and use it's santax.
+Using "react-transition-group" package, and use it's santax.  
+(similar with the **Bootstrap** library)
+```
+<TransitionGroup component="ul" className="order">
+	{orderIds.map(this.renderOrder)}
+</TransitionGroup>
+```
