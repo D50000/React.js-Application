@@ -1,2 +1,3 @@
 // This file will block what file don't need to upload to github.
 node_modules
+build
