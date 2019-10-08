@@ -165,3 +165,8 @@ MyComponent.propTypes = {
 	optionalSymbol: PropTypes.symbol,
 }
 ```
+
+
+## 17. Useful Plugins
+ - create-React-app (Develop template, Boilerplate, **eject**)
+ - Next.js (Server Side Render, Webpack, Router...)
