@@ -1,5 +1,12 @@
 // This file will block what file don't need to upload to github.
+
+
 node_modules
+
 build
-now.json // for the "now server"
-.DS_Store // Mac book's meta data file.
+
+// for the "now server"
+now.json 
+
+// Mac book's meta data file.
+.DS_Store 
