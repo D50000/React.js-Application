@@ -9,6 +9,7 @@ And make learning notes for everyone.
  - Install **react developer tools** (for Chrome or Firefox browser)
  - Install **Prettier** (for auto formatting to code when save.)
  - Install terminal [**cmder**](https://cmder.net/) (only if you are windows user)
+ - Install **Babel JavaScript** syntax highlighting for VSCode.
 
 
 ## 2. package.json
