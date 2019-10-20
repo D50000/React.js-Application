@@ -39,7 +39,7 @@ return(
 ```
 
 
-## 4. Loadinf CSS into React Application
+## 4. Loading CSS into React Application
  1. Import at **individual components**.
  2. Load at index.js or index.html.
 
