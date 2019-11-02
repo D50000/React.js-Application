@@ -129,10 +129,11 @@ A separate render function in a single component, for more readable code.
 
 ## 13. Life Cycle methods
 https://reactjs.org/docs/react-component.html#mounting  
-**Mounting:** componentDidMount()
-**Updating:** componentDidUpdate()
-**Unmounting:** componentWillUnmount()
-**Error Handling:** componentDidCatch()
+
+In this lifecycle diagram, commonly used lifecycle methods are marked as bold.  
+The rest of them exist for relatively rare use cases.
+![](https://github.com/D50000/React.js-Application/blob/master/react_lifecycle.png)  
+
 
 
 ## 14. Bi-directional Data Flow and Live State Editing
