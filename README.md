@@ -1,8 +1,13 @@
 
 # React.js-Application
-Develop a Application with **React.js**.
+Develop a Application with [**React.js**](https://beta.reactjs.org/learn).
 And make learning notes for everyone.
 
+## React Core Concepts
+- Components
+- Props
+- State and [Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [ref](https://beta.reactjs.org/learn/referencing-values-with-refs)
 
 ## 1. Environment setup
  - Install **node.js** (for running modules and tools)
@@ -128,13 +133,16 @@ A separate render function in a single component, for more readable code.
 
 
 ## 13. Life Cycle methods
-https://reactjs.org/docs/react-component.html#mounting  
+https://reactjs.org/docs/reaＦct-component.html#mounting  
 
 In this lifecycle diagram, commonly used lifecycle methods are marked as bold.  
 The rest of them exist for relatively rare use cases.
 ![](https://github.com/D50000/React.js-Application/blob/master/react_lifecycle.png)  
-
-
+  
+React.js (data and template binding, rendering)  
+  1. Triggering a render, React will call the root component.
+  2. Rendering the component, React will call the function component whose state update triggered the render.  
+  3. Committing to the DOM, React will apply the minimal necessary operations (calculated while rendering!).  
 
 ## 14. Bi-directional Data Flow and Live State Editing
 **There is no Bi-directional Data Binding method in React.** (React Decipline)
@@ -168,7 +176,7 @@ MyComponent.propTypes = {
 }
 ```
 
-
 ## 17. Useful Plugins
- - create-React-app (Develop template, Boilerplate, **eject**)
+ - create-React-app (SPA, Develop template, Boilerplate, **eject**)
  - Next.js (Server Side Render, Webpack, Router...)
+ - Gatsby (Static Website, PWA, fast, SEO...)
