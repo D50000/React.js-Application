@@ -9,7 +9,7 @@ And make learning notes for everyone.
 - **State**,  and [**Hooks**](https://reactjs.org/docs/hooks-intro.html)
   - [Ref](https://beta.reactjs.org/learn/referencing-values-with-refs)
   - [Reducer](https://beta.reactjs.org/learn/managing-state#extracting-state-logic-into-a-reducer)
-  - [Context](https://beta.reactjs.org/learn/managing-state#passing-data-deeply-with-context)
+  - [Context](https://beta.reactjs.org/learn/passing-data-deeply-with-context)
 
 ## 1. Environment setup
  - Install **node.js** (for running modules and tools)
