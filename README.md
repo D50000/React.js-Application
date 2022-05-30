@@ -4,10 +4,12 @@ Develop a Application with [**React.js**](https://beta.reactjs.org/learn).
 And make learning notes for everyone.
 
 ## React Core Concepts
-- Components
-- Props
-- State and [Hooks](https://reactjs.org/docs/hooks-intro.html)
-- [ref](https://beta.reactjs.org/learn/referencing-values-with-refs)
+- **Components**
+- **Props**
+- **State**,  and [**Hooks**](https://reactjs.org/docs/hooks-intro.html)
+  - [Ref](https://beta.reactjs.org/learn/referencing-values-with-refs)
+  - [Reducer](https://beta.reactjs.org/learn/managing-state#extracting-state-logic-into-a-reducer)
+  - [Context](https://beta.reactjs.org/learn/managing-state#passing-data-deeply-with-context)
 
 ## 1. Environment setup
  - Install **node.js** (for running modules and tools)
@@ -119,7 +121,7 @@ render() {
 
 ## 10. State in React
 **State** is a object that contain all the component's data. 
-Store at root component, and transfer with in props to chil components.
+Store at root component, and transfer with in props to children components.
 
 
 ## 11. Render Function
@@ -145,14 +147,14 @@ React.js (data and template binding, rendering)
   3. Committing to the DOM, React will apply the minimal necessary operations (calculated while rendering!).  
 
 ## 14. Bi-directional Data Flow and Live State Editing
-**There is no Bi-directional Data Binding method in React.** (React Decipline)
+**There is no Bi-directional Data Binding method in React.** (React Discipline)
  1. Pass the update method down to the component with props.
  2. Component call the update method. 
  3. App.js update the state.
 
 
 ## 15. Animating React Components
-Using "react-transition-group" package, and use it's santax.  
+Using "react-transition-group" package, and use it's syntax.  
 (similar with the **Bootstrap** library)
 ```
 <TransitionGroup component="ul" className="order">
@@ -177,6 +179,6 @@ MyComponent.propTypes = {
 ```
 
 ## 17. Useful Plugins
- - create-React-app (SPA, Develop template, Boilerplate, **eject**)
- - Next.js (Server Side Render, Webpack, Router...)
- - Gatsby (Static Website, PWA, fast, SEO...)
+ - create-React-app (**SPA**, Develop template, Boilerplate, **eject**)
+ - Next.js (**SSR**, **Router**, **SEO**, Webpack...)
+ - Gatsby (**Static Website**, **PWA**, fast, **SEO**...)
