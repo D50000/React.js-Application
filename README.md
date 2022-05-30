@@ -33,15 +33,15 @@ It is the project configuration file.
 **JSX doesn't have any logic statement.** (ex: loop for create DOM)
 ```
 return(
-	<Fragment>
-	{/* "Fragment tag" for multiple tag in sigle component */}
-		<header className="top">
-			<h1>D50000 Fish Market</h1>
-			<h3 className="tagline">
-				<span>{this.props.tagline}</span>
-			</h3>
-		</header>
-	</Fragment>
+  <Fragment>
+  {/* "Fragment tag" for multiple tag in sigle component */}
+    <header className="top">
+      <h1>D50000 Fish Market</h1>
+      <h3 className="tagline">
+        <span>{this.props.tagline}</span>
+      </h3>
+    </header>
+  </Fragment>
 )
 ```
 
@@ -59,23 +59,23 @@ return(
 ## 6. Stateless Functional Components
 ```
 class Header extends React.Component {
-    render() {
-        return (
-            {/* render DOM....... */}
-            <h3 className="tagline">
-                <span>{this.props.tagline}</span>
-            </h3>
-        );
-	}
+  render() {
+    return (
+      {/* render DOM....... */}
+      <h3 className="tagline">
+        <span>{this.props.tagline}</span>
+      </h3>
+    );
+  }
 }
 ```
 If the components only do the simply render stuff. It can change to **Stateless Function**.  ⬇️⬇️⬇️⬇️⬇️⬇️
 ```
 const Header = props => (
-	{/* render DOM....... */}
-	<h3 className="tagline">
-	    <span>{props.tagline}</span>
-	</h3>
+  {/* render DOM....... */}
+  <h3 className="tagline">
+    <span>{props.tagline}</span>
+  </h3>
 );
 ```
 
@@ -84,9 +84,9 @@ const Header = props => (
 A component that control the web routing & redirect.
 ```
 <Switch>
-	<Route exact path="/" component={StorePicker} />
-	<Route path="/store/:storeId" component={App} />
-	<Route component={NotFound} />
+  <Route exact path="/" component={StorePicker} />
+  <Route path="/store/:storeId" component={App} />
+  <Route component={NotFound} />
 </Switch>
 ```
 
@@ -109,12 +109,12 @@ nameRef = React.createRef();
 priceRef = React.createRef();
 
 render() {
-    return(
-        <form className="fish-edit" onSubmit={this.createFish}>
-            <input name="name" ref={this.nameRef} type="text" placeholder="Name"/>
-            <input name="price" ref={this.priceRef} type="text" placeholder="Price"/>
-        </form>
-    )
+  return(
+    <form className="fish-edit" onSubmit={this.createFish}>
+      <input name="name" ref={this.nameRef} type="text" placeholder="Name"/>
+      <input name="price" ref={this.priceRef} type="text" placeholder="Price"/>
+    </form>
+  )
 }
 ```
 
@@ -158,7 +158,7 @@ Using "react-transition-group" package, and use it's syntax.
 (similar with the **Bootstrap** library)
 ```
 <TransitionGroup component="ul" className="order">
-	{orderIds.map(this.renderOrder)}
+  {orderIds.map(this.renderOrder)}
 </TransitionGroup>
 ```
 
@@ -167,14 +167,14 @@ Using "react-transition-group" package, and use it's syntax.
 [https://zh-hant.reactjs.org/docs/typechecking-with-proptypes.html](https://zh-hant.reactjs.org/docs/typechecking-with-proptypes.html)
 ```
 MyComponent.propTypes = {
-	// You can declare that a prop is a specific JS type. By default, these are all optional.
-	optionalArray: PropTypes.array,
-	optionalBool: PropTypes.bool,
-	optionalFunc: PropTypes.func,
-	optionalNumber: PropTypes.number.isRequired,
-	optionalObject: PropTypes.object,
-	optionalString: PropTypes.string.isRequired,
-	optionalSymbol: PropTypes.symbol,
+  // You can declare that a prop is a specific JS type. By default, these are all optional.
+  optionalArray: PropTypes.array,
+  optionalBool: PropTypes.bool,
+  optionalFunc: PropTypes.func,
+  optionalNumber: PropTypes.number.isRequired,
+  optionalObject: PropTypes.object,
+  optionalString: PropTypes.string.isRequired,
+  optionalSymbol: PropTypes.symbol,
 }
 ```
 
