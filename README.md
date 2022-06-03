@@ -1,36 +1,39 @@
-
 # React.js-Application
+
 Develop a Application with [**React.js**](https://beta.reactjs.org/learn).
-And make learning notes for everyone.
+Using [Create-React-App](https://beta.reactjs.org/learn/start-a-new-react-project#getting-started-with-a-minimal-toolchain) and make  the learning notes for everyone.
 
 ## React Core Concepts
+
 - **Components**
 - **Props**
-- **State**,  and [**Hooks**](https://reactjs.org/docs/hooks-intro.html)
+- **State**, and [**Hooks**](https://reactjs.org/docs/hooks-intro.html)
   - [Ref](https://beta.reactjs.org/learn/referencing-values-with-refs)
   - [Reducer](https://beta.reactjs.org/learn/managing-state#extracting-state-logic-into-a-reducer)
   - [Context](https://beta.reactjs.org/learn/passing-data-deeply-with-context)
 
 ## 1. Environment setup
- - Install **node.js** (for running modules and tools)
- - Install **react developer tools** (for Chrome or Firefox browser)
- - Install **Prettier** (for auto formatting to code when save.)
- - Install terminal [**cmder**](https://cmder.net/) (only if you are windows user)
- - Install **Babel JavaScript** syntax highlighting for VSCode.
 
+- Install **node.js** (for running modules and tools)
+- Install **react developer tools** (for Chrome or Firefox browser)
+- Install **Prettier** (for auto formatting to code when save.)
+- Install terminal [**cmder**](https://cmder.net/) (only if you are windows user)
+- Install **Babel JavaScript** syntax highlighting for VSCode.
 
 ## 2. package.json
+
 It is the project configuration file.  
 (similar with with the **Java Spring framework: server.xml**)
 
- 1. Download the project and input `npm install` then it will reference
+1.  Download the project and input `npm install` then it will reference
     all the modules back.
- 2. Input `npm start` for start the server.
- 3. `ctrl + c` for stop the server.
-
+2.  Input `npm start` for start the server.
+3.  `ctrl + c` for stop the server.
 
 ## 3. JSX (JavaScript XML) Components
+
 **JSX doesn't have any logic statement.** (ex: loop for create DOM)
+
 ```
 return(
   <Fragment>
@@ -45,18 +48,18 @@ return(
 )
 ```
 
-
 ## 4. Loading CSS into React Application
- 1. Import at **individual components**.
- 2. Load at index.js or index.html.
 
+1.  Import at **individual components**.
+2.  Load at index.js or index.html.
 
 ## 5. Props and State
- - `props` provide for the components.
- - `state` is the container of `props`. (More informantion in #10)
 
+- `props` provide for the components.
+- `state` is the container of `props`. (More informantion in #10)
 
 ## 6. Stateless Functional Components
+
 ```
 class Header extends React.Component {
   render() {
@@ -69,7 +72,9 @@ class Header extends React.Component {
   }
 }
 ```
-If the components only do the simply render stuff. It can change to **Stateless Function**.  ⬇️⬇️⬇️⬇️⬇️⬇️
+
+If the components only do the simply render stuff. It can change to **Stateless Function**. ⬇️⬇️⬇️⬇️⬇️⬇️
+
 ```
 const Header = props => (
   {/* render DOM....... */}
@@ -79,9 +84,10 @@ const Header = props => (
 );
 ```
 
-
 ## 7. React Router
+
 A component that control the web routing & redirect.
+
 ```
 <Switch>
   <Route exact path="/" component={StorePicker} />
@@ -90,20 +96,21 @@ A component that control the web routing & redirect.
 </Switch>
 ```
 
-
 ## 8. Export methods
- - Import **library**:  
- export  default  Class;  
- ⬇️⬇️⬇️⬇️⬇️⬇️  
- import  Class from  "Class";  
- - Import **method**:  
- export  function  test(arr) {........}  
- ⬇️⬇️⬇️⬇️⬇️⬇️  
- import { test } from "Class ";
 
+- Import **library**:  
+  export default Class;  
+  ⬇️⬇️⬇️⬇️⬇️⬇️  
+  import Class from "Class";
+- Import **method**:  
+  export function test(arr) {........}  
+  ⬇️⬇️⬇️⬇️⬇️⬇️  
+  import { test } from "Class ";
 
 ## 9. Refs in React
+
 **ref** can bind the attribute data in the DOM.
+
 ```
 nameRef = React.createRef();
 priceRef = React.createRef();
@@ -118,53 +125,56 @@ render() {
 }
 ```
 
-
 ## 10. State in React
-**State** is a object that contain all the component's data. 
+
+**State** is a object that contain all the component's data.
 Store at root component, and transfer with in props to children components.
 
-
 ## 11. Render Function
+
 A separate render function in a single component, for more readable code.
 
-
 ## 12. Firebase
- - Real time data
- - WebSocket transfer
- - Life cycle API control data flow
 
+- Real time data
+- WebSocket transfer
+- Life cycle API control data flow
 
-## 13. Life Cycle methods
-https://reactjs.org/docs/reaＦct-component.html#mounting  
+## 13. [Life Cycle methods](https://reactjs.org/docs/state-and-lifecycle.html#adding-lifecycle-methods-to-a-class)
 
 In this lifecycle diagram, commonly used lifecycle methods are marked as bold.  
 The rest of them exist for relatively rare use cases.
-![](https://github.com/D50000/React.js-Application/blob/master/react_lifecycle.png)  
-  
-React.js (data and template binding, rendering)  
-  1. Triggering a render, React will call the root component.
-  2. Rendering the component, React will call the function component whose state update triggered the render.  
-  3. Committing to the DOM, React will apply the minimal necessary operations (calculated while rendering!).  
+![](https://github.com/D50000/React.js-Application/blob/master/react_lifecycle.png)
+
+React.js (data and template binding, rendering)
+
+1. Triggering a render, React will call the root component.
+2. Rendering the component, React will call the function component whose state update triggered the render.
+3. Committing to the DOM, React will apply the minimal necessary operations (calculated while rendering!).
 
 ## 14. Bi-directional Data Flow and Live State Editing
-**There is no Bi-directional Data Binding method in React.** (React Discipline)
- 1. Pass the update method down to the component with props.
- 2. Component call the update method. 
- 3. App.js update the state.
 
+**There is no Bi-directional Data Binding method in React.** (React Discipline)
+
+1.  Pass the update method down to the component with props.
+2.  Component call the update method.
+3.  App.js update the state.
 
 ## 15. Animating React Components
+
 Using "react-transition-group" package, and use it's syntax.  
 (similar with the **Bootstrap** library)
+
 ```
 <TransitionGroup component="ul" className="order">
   {orderIds.map(this.renderOrder)}
 </TransitionGroup>
 ```
 
-
 ## 16. Component Validation with Prop Types
+
 [https://zh-hant.reactjs.org/docs/typechecking-with-proptypes.html](https://zh-hant.reactjs.org/docs/typechecking-with-proptypes.html)
+
 ```
 MyComponent.propTypes = {
   // You can declare that a prop is a specific JS type. By default, these are all optional.
@@ -179,6 +189,7 @@ MyComponent.propTypes = {
 ```
 
 ## 17. Useful Plugins
- - create-React-app (**SPA**, Develop template, Boilerplate, **eject**)
- - Next.js (**SSR**, **Router**, **SEO**, Webpack...)
- - Gatsby (**Static Website**, **PWA**, fast, **SEO**...)
+
+- create-React-app (**SPA**, Develop template, Boilerplate, **eject**)
+- Next.js (**SSR**, **Router**, **SEO**, Webpack...)
+- Gatsby (**Static Website**, **PWA**, fast, **SEO**...)
