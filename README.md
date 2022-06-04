@@ -1,7 +1,7 @@
 # React.js-Application
 
 Develop a Application with [**React.js**](https://beta.reactjs.org/learn).
-Using [Create-React-App](https://beta.reactjs.org/learn/start-a-new-react-project#getting-started-with-a-minimal-toolchain) and make  the learning notes for everyone.
+Using [Create-React-App](https://beta.reactjs.org/learn/start-a-new-react-project#getting-started-with-a-minimal-toolchain) and make the learning notes for everyone.
 
 ## React Core Concepts
 
@@ -140,17 +140,19 @@ A separate render function in a single component, for more readable code.
 - WebSocket transfer
 - Life cycle API control data flow
 
-## 13. [Life Cycle methods](https://reactjs.org/docs/state-and-lifecycle.html#adding-lifecycle-methods-to-a-class)
+## 13. Lifecycle methods
 
-In this lifecycle diagram, commonly used lifecycle methods are marked as bold.  
-The rest of them exist for relatively rare use cases.
+The 3 phases are: [Mounting, Updating, and Unmounting.](https://reactjs.org/docs/state-and-lifecycle.html#adding-lifecycle-methods-to-a-class)
+
+[Lifecycle Diagram](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 ![](https://github.com/D50000/React.js-Application/blob/master/react_lifecycle.png)
 
-React.js (data and template binding, rendering)
 
-1. Triggering a render, React will call the root component.
-2. Rendering the component, React will call the function component whose state update triggered the render.
-3. Committing to the DOM, React will apply the minimal necessary operations (calculated while rendering!).
+**React** (data, template binding and rendering)
+
+1. **Triggering a render**: React will call the root component.
+2. **Rendering the component**: React will call the function component whose state update triggered the render.
+3. **Committing to the DOM**: React will apply the minimal necessary operations (calculated while rendering).
 
 ## 14. Bi-directional Data Flow and Live State Editing
 
@@ -173,7 +175,7 @@ Using "react-transition-group" package, and use it's syntax.
 
 ## 16. Component Validation with Prop Types
 
-[https://zh-hant.reactjs.org/docs/typechecking-with-proptypes.html](https://zh-hant.reactjs.org/docs/typechecking-with-proptypes.html)
+Use [prop-types library](https://zh-hant.reactjs.org/docs/typechecking-with-proptypes.html) since React v15.5
 
 ```
 MyComponent.propTypes = {
