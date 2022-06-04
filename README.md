@@ -146,7 +146,13 @@ The 3 phases are: [Mounting, Updating, and Unmounting.](https://reactjs.org/docs
 
 [Lifecycle Diagram](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 ![](https://github.com/D50000/React.js-Application/blob/master/react_lifecycle.png)
-
+| # | Common used API | Purpose | Example |
+| --- | ------------- | ------------------ | -------------- |
+| 1 | **constructor(props)** | If you don’t initialize state and bind methods, no need to implement a constructor in React component. | 1. Initial props `constructor(props)`. 2. Initializing local state by assigning an object to this.state. 3. Binding event handler methods to an instance. |
+| 2 | **render()** | The only **_required_** method in a class component. | It will return the component to the DOM. |
+| 3 | **componentDidMount()** | Invoked immediately after a component is mounted (inserted into the tree). | Set up any subscriptions or APIs. |
+| 4 | **componentDidUpdate(prevProps, prevState, snapshot)** | Invoked immediately after updating occurs. This method is **_not called for the initial render_**. | Update the API data or business's logic scenario. |
+| 5 | **componentWillUnmount()** | Invoked immediately **_before_** a component is unmounted and destroyed | Clean and remove the request or method here. **_Should not call setState() here_**.
 
 **React** (data, template binding and rendering)
 
