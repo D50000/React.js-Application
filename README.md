@@ -154,6 +154,8 @@ The 3 phases are: [Mounting, Updating, and Unmounting.](https://reactjs.org/docs
 | 4 | **componentDidUpdate(prevProps, prevState, snapshot)** | Invoked immediately after updating occurs. This method is **_not called for the initial render_**. | Update the API data or business's logic scenario. |
 | 5 | **componentWillUnmount()** | Invoked immediately **_before_** a component is unmounted and destroyed | Clean and remove the request or method here. **_Should not call setState() here_**.
 
+ps: [useEffect](https://zh-hant.reactjs.org/docs/hooks-effect.html) will run when ***componentDidMount***, ***componentDidUpdate*** trigger.It's similar with ***Angular's ngOnchanges***.
+
 **React** (data, template binding and rendering)
 
 1. **Triggering a render**: React will call the root component.
